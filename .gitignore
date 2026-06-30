@@ -5,7 +5,7 @@ config.json
 models/model.ckpt
 models/ram.ckpt
 *.ckpt
-Train/results/
+**/results/
 
 # Python Cache & Virtual Environments
 __pycache__/
