@@ -30,19 +30,22 @@ A professional machine vision application designed for real-time quality control
 ├── frontend/                 # Vite + React user interface dashboard
 │   ├── public/               # Static assets & icons
 │   └── src/                  # React components, pages, hooks, and API client
-├── models/                   # Neural network weights and pose templates
-│   ├── templates/            # Expected template images for pose alignment (1.jpg to 8.jpg)
-│   └── model.ckpt            # [Excluded] PatchCore model checkpoint file
+├── models/                   # [Excluded] Neural network weights and pose templates (ignored by Git)
 ├── tools/                    # Standalone utility scripts for dataset preparation
 │   ├── capture_dataset.py    # Hardware/timer-triggered camera dataset capture script
 │   └── convert_bayer_to_mono.py # Raw Bayer to Grayscale image converter
 ├── data/                     # Local data folders (ignored by Git)
-├── docs/                     # Documentation & reports
+├── docs/                     # Documentation, datasets & reports
+│   ├── OK/                   # Dataset of conforming parts (100+ raw images)
+│   ├── NG/                   # Dataset of defective parts (scratches, dents)
+│   ├── Train/                # Training pipelines and dataset (Train/val folders)
+│   ├── Mono_op/              # Monochromatic output/processed dataset folder
 │   ├── sample_images/        # Sample OK/NG part crop and anomaly visualizations
 │   └── software_screenshots/ # Screenshots of the Vision System software (OK, NG, Camera Config)
 ├── config.json               # System runtime configuration file (ignored by Git)
 ├── config.json.example       # Redacted template configuration file
 └── .gitignore                # Git ignore rules
+
 ```
 
 ---
