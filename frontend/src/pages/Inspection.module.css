@@ -1,0 +1,328 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 24px;
+  gap: 20px;
+}
+
+/* ── Header ─────────────────────────────── */
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.pageTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.pageDesc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 13px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-top: 4px;
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.badgeRunning {
+  background: var(--pass-bg);
+  color: var(--pass);
+}
+
+.badgeStopped {
+  background: #f1f5f9;
+  color: var(--text-secondary);
+}
+
+/* ── Error bar ───────────────────────────── */
+.errorBar {
+  background: var(--reject-bg);
+  color: var(--reject);
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* ── Body ────────────────────────────────── */
+.body {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  min-height: 0;
+}
+
+/* ── Video card ──────────────────────────── */
+.videoCard {
+  flex: 1;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.resultPill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pillPass {
+  background: var(--pass-bg);
+  color: var(--pass);
+}
+
+.pillReject {
+  background: var(--reject-bg);
+  color: var(--reject);
+}
+
+.feedArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  position: relative;
+  min-height: 0;
+}
+
+.cameraFeed {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 32px;
+}
+
+.placeholderIcon {
+  opacity: 0.35;
+  margin-bottom: 4px;
+}
+
+.placeholderText {
+  font-size: 15px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.placeholderSub {
+  font-size: 13px;
+  color: #475569;
+  opacity: 0.7;
+}
+
+/* ── Side panel ──────────────────────────── */
+.sidePanel {
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+}
+
+.cardTitle {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+/* ── Buttons ─────────────────────────────── */
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.btnStart {
+  background: #16a34a;
+  color: #fff;
+}
+
+.btnStop {
+  background: #dc2626;
+  color: #fff;
+}
+
+/* ── Result rows ─────────────────────────── */
+.resultList {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.resultRow:last-child {
+  border-bottom: none;
+}
+
+.rowLabel {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.rowValue {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.colorPass   { color: var(--pass); }
+.colorReject { color: var(--reject); }
+.colorWarn   { color: var(--warn); }
+
+.noResult {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* ── Info card ───────────────────────────── */
+.infoCard {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.infoLabel {
+  color: var(--text-secondary);
+}
+
+.infoValue {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.workerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.workerSep {
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin: 0 1px;
+}
+
+.code {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 11px;
+  background: #e2e8f0;
+  color: #334155;
+  padding: 2px 7px;
+  border-radius: 4px;
+}

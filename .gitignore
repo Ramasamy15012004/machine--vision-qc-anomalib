@@ -1,0 +1,27 @@
+# Configuration
+config.json
+
+# Model Weights
+models/model.ckpt
+models/ram.ckpt
+*.ckpt
+Train/results/
+
+# Python Cache & Virtual Environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Node Package Manager
+node_modules/
+dist/
+.env
+
+# Data and Outputs
+output/
+data/
+captured/
+mono/
+bayer/
